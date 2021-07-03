@@ -16,9 +16,9 @@ class f(nn.Module):
 		return self.net(x)
 
 
-class BPR(nn.Module):
+class Base_model(nn.Module):
 	def __init__(self, user_num, item_num, dim, gpu):
-		super(BPR, self).__init__()
+		super(Base_model, self).__init__()
 		self.user_num = user_num
 		self.item_num = item_num
 
@@ -56,10 +56,10 @@ class BPR(nn.Module):
 		return users, items
 
 
-class FTD(BPR):
+class FTD(Base_model):
 	def __init__(self, user_num, item_num, user_emb_teacher, item_emb_teacher, gpu, student_dim):
 
-		BPR.__init__(self, user_num, item_num, student_dim, gpu)
+		Base_model.__init__(self, user_num, item_num, student_dim, gpu)
 
 		self.student_dim = student_dim
 		self.gpu = gpu
@@ -88,10 +88,10 @@ class FTD(BPR):
 		return total_loss
 
 
-class HTD(BPR):
+class HTD(Base_model):
 	def __init__(self, user_num, item_num, user_emb_teacher, item_emb_teacher, gpu, student_dim, K, choice):
 
-		BPR.__init__(self, user_num, item_num, student_dim, gpu)
+		Base_model.__init__(self, user_num, item_num, student_dim, gpu)
 
 		self.student_dim = student_dim
 		self.gpu = gpu
@@ -167,9 +167,9 @@ class HTD(BPR):
 		f_hat = f_hat * z										
 		f_hat = f_hat.sum(2)													
 
-		DE_loss = ((t-f_hat) ** 2).sum(-1).sum() 
+		GA_loss = ((t-f_hat) ** 2).sum(-1).sum() 
 
-		return DE_loss 
+		return GA_loss 
 
 
 	def get_TD_loss(self, batch_user, batch_item):
