@@ -2,12 +2,15 @@
 This repository provides the source code of "Topology Distillation for Recommender System" accepted in KDD2021 as a research paper.
 
 ### 1. Overview
-We develop a general topology distillation approach for RS, which guides the learning of the student by the topological structure built upon the relational knowledge in the teacher representation space.
+We develop a general topology distillation approach for Recommender System.
+The topology distillation guides the learning of the student model by the topological structure built upon the relational knowledge in representation space of the teacher model.
+
 Concretely, we propose two topology distillation methods: 
 
   <ol type="a">
   <li><b>Full Topology Distillation (FTD)</b>. 
       FTD transfers the full topology, and it is used in the scenario where the student has enough capacity to learn all the teacher’s knowledge.</li>
+  
   <li><b>Hierarchical Topology Distillation (HTD)</b>. HTD transfers the decomposed topology hierarchically, and it is adopted in the classical KD scenario where the student has a very limited capacity compared to the teacher.</li>
   </ol>
 
