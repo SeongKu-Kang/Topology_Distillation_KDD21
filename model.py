@@ -10,10 +10,7 @@ class f(nn.Module):
 	def __init__(self, dims):
 		super(f, self).__init__()
 
-		self.net = nn.Sequential(nn.Linear(dims[0], dims[1]),
-								nn.ReLU(),
-								nn.Linear(dims[1], dims[2])
-								)
+		self.net = nn.Sequential(nn.Linear(dims[0], dims[1]), nn.ReLU(), nn.Linear(dims[1], dims[2]))
 
 	def forward(self, x):
 		return self.net(x)
