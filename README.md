@@ -15,10 +15,12 @@ Concretely, we propose two topology distillation methods:
 ### 2. Main Results
 
 - When the capacity of the student model is highly limited, the student model learns best with HTD.
-![TD1](https://user-images.githubusercontent.com/68782810/124361145-8a4ddc00-dc68-11eb-8a2f-1e93efd26184.jpg)
+
+  ![TD1](https://user-images.githubusercontent.com/68782810/124361145-8a4ddc00-dc68-11eb-8a2f-1e93efd26184.jpg)
 
 - As the capacity gap between the teacher model and student model decreases, the student model takes more benefits from FTD.
-![TD2](https://user-images.githubusercontent.com/68782810/124361147-8b7f0900-dc68-11eb-8ccd-bfe93131c7b0.jpg)
+
+  ![TD2](https://user-images.githubusercontent.com/68782810/124361147-8b7f0900-dc68-11eb-8ccd-bfe93131c7b0.jpg)
 
 
 ### 3. Requirements
