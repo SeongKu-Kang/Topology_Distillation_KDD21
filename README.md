@@ -5,9 +5,12 @@ This repository provides the source code of "Topology Distillation for Recommend
 We develop a general topology distillation approach for RS, which guides the learning of the student by the topological structure built upon the relational knowledge in the teacher representation space.
 Concretely, we propose two topology distillation methods: 
 
-A) FTD that transfers the full topology. FTD is used in the scenario where the student has enough capacity to learn all the teacher’s knowledge.
+  <ol type="a">
+  <li><b>Full Topology Distillation (FTD)</b>. 
+      FTD transfers the full topology, and it is used in the scenario where the student has enough capacity to learn all the teacher’s knowledge.</li>
+  <li><b>Hierarchical Topology Distillation (HTD)</b>. HTD transfers the decomposed topology hierarchically, and it is adopted in the classical KD scenario where the student has a very limited capacity compared to the teacher.</li>
+  </ol>
 
-B) HTD that transfers the decomposed topology hierarchically. HTD is adopted in the conventional KD scenario where the student has a very limited capacity compared to the teacher.
 
 ### 2. Main Results
 
