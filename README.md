@@ -14,6 +14,8 @@ Concretely, we propose two topology distillation methods:
   <li><b>Hierarchical Topology Distillation (HTD)</b>. HTD transfers the decomposed topology hierarchically, and it is adopted in the classical KD scenario where the student has a very limited capacity compared to the teacher.</li>
   </ol>
 
+![TD](https://user-images.githubusercontent.com/68782810/131844039-3b486337-b6aa-44d9-a922-907f2546d9b5.png)
+
 
 ### 2. Main Results
 
